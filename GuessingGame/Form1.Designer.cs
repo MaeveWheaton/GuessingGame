@@ -86,7 +86,7 @@ namespace GuessingGame
             this.rangeOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rangeOutput.Location = new System.Drawing.Point(559, 416);
             this.rangeOutput.Name = "rangeOutput";
-            this.rangeOutput.Size = new System.Drawing.Size(331, 68);
+            this.rangeOutput.Size = new System.Drawing.Size(547, 68);
             this.rangeOutput.TabIndex = 4;
             this.rangeOutput.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -95,7 +95,7 @@ namespace GuessingGame
             this.hintOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hintOutput.Location = new System.Drawing.Point(559, 484);
             this.hintOutput.Name = "hintOutput";
-            this.hintOutput.Size = new System.Drawing.Size(331, 68);
+            this.hintOutput.Size = new System.Drawing.Size(557, 68);
             this.hintOutput.TabIndex = 5;
             this.hintOutput.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -117,7 +117,7 @@ namespace GuessingGame
             this.guessDisplayOuput.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guessDisplayOuput.Location = new System.Drawing.Point(559, 348);
             this.guessDisplayOuput.Name = "guessDisplayOuput";
-            this.guessDisplayOuput.Size = new System.Drawing.Size(331, 68);
+            this.guessDisplayOuput.Size = new System.Drawing.Size(553, 68);
             this.guessDisplayOuput.TabIndex = 7;
             this.guessDisplayOuput.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -150,7 +150,7 @@ namespace GuessingGame
             this.Controls.Add(this.titleLabel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.900001F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.ShowIcon = false;
             this.Text = "Guessing Game";

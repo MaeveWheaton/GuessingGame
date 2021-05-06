@@ -27,54 +27,61 @@ namespace GuessingGame
 
         private void guessButton_Click(object sender, EventArgs e)
         {
-            //get guess
-            userGuess = Convert.ToInt32(guessInput.Text);
+            try
+            {
+                //get guess
+                userGuess = Convert.ToInt32(guessInput.Text);
 
-            //clear and display guess
-            guessInput.Clear();
-            guessDisplayOuput.Text = $"Last Guess: {userGuess}";
+                //clear and display guess
+                guessInput.Clear();
+                guessDisplayOuput.Text = $"Last Guess: {userGuess}";
 
-            //compare to actualNumber
-            if (userGuess > actualNumber)
-            {
-                rangeOutput.Text = "Too High";
-            }
-            else if (userGuess < actualNumber)
-            {
-                rangeOutput.Text = "Too Low";
-            }
-            else
-            {
-                rangeOutput.Text = "You Got It!";
-            }
+                //compare to actualNumber
+                if (userGuess > actualNumber)
+                {
+                    rangeOutput.Text = "Too High";
+                }
+                else if (userGuess < actualNumber)
+                {
+                    rangeOutput.Text = "Too Low";
+                }
+                else
+                {
+                    rangeOutput.Text = "You Got It!";
+                }
 
-            //hint
-            int difference = actualNumber - userGuess;
-            int diffAbsolute = Math.Abs(difference);
+                //hint
+                int difference = actualNumber - userGuess;
+                int diffAbsolute = Math.Abs(difference);
 
-            if(diffAbsolute >= 50)
-            {
-                hintOutput.Text = "Freezing";
+                if (diffAbsolute >= 50)
+                {
+                    hintOutput.Text = "Freezing";
+                }
+                else if (diffAbsolute >= 25 && diffAbsolute < 50)
+                {
+                    hintOutput.Text = "Cold";
+                }
+                else if (diffAbsolute >= 15 && diffAbsolute < 25)
+                {
+                    hintOutput.Text = "Cool";
+                }
+                else if (diffAbsolute >= 10 && diffAbsolute < 15)
+                {
+                    hintOutput.Text = "Warm";
+                }
+                else if (diffAbsolute >= 5 && diffAbsolute < 10)
+                {
+                    hintOutput.Text = "Hot";
+                }
+                else
+                {
+                    hintOutput.Text = "Boiling";
+                }
             }
-            else if (diffAbsolute >= 25 && diffAbsolute < 50)
+            catch
             {
-                hintOutput.Text = "Cold";
-            }
-            else if (diffAbsolute >= 15 && diffAbsolute < 25)
-            {
-                hintOutput.Text = "Cool";
-            }
-            else if (diffAbsolute >= 10 && diffAbsolute < 15)
-            {
-                hintOutput.Text = "Warm";
-            }
-            else if (diffAbsolute >= 5 && diffAbsolute < 10)
-            {
-                hintOutput.Text = "Hot";
-            }
-            else
-            {
-                hintOutput.Text = "Boiling";
+                rangeOutput.Text = "Enter whole number";
             }
         }
 
